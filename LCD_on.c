@@ -1,6 +1,6 @@
 void intiallizing ()
 {
-	
+	volatile unsigned long delay;
 	SYSCTL_RCGCGPIO_R |= 0x20;
 	while( (SYSCTL_PRGPIO_R & 0x20) == 0){}
 	GPIO_PORTF_LOCK_R = 0x4C4F434B;
